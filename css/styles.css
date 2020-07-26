@@ -7,3 +7,20 @@
   background-color: #74fcfd;
   color: black;
 }
+.overall-layout {
+  margin: 5%;
+}
+
+#chatbox {
+  text-align: left;
+  margin: 0 auto;
+  background: #fff;
+  height: 50em;
+  width: 100%;
+  border: 1px solid #acd8f0;
+  overflow: auto;
+}
+
+#wrapper {
+  margin: 2%;
+}
