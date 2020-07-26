@@ -1,9 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Publichat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
 <?
 session_start();
- 
+$nickname = $_SESSION['nickname'];
 function loginForm(){
-    echo'
-    <div class="overall-layout">
+    echo'<div class="overall-layout">
       <form name="main-form" action="chat.php" method="post">
         <h1 class="mt-5">Public Display Name</h1>
         <div class="form-group">
@@ -42,7 +61,8 @@ function loginForm(){
           Create a Room
         </button>
       </form>
-    </div>
-    ';
+    </div>';
    
 }
+?>
+</html>
