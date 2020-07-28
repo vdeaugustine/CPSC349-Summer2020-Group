@@ -17,12 +17,8 @@
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
-<?
-session_start();
-$nickname = $_SESSION['nickname'];
-function loginForm(){
-    echo'<div class="overall-layout">
+  
+    <div class="overall-layout">
       <form name="main-form" action="chat.php" method="post">
         <h1 class="mt-5">Public Display Name</h1>
         <div class="form-group">
@@ -61,8 +57,4 @@ function loginForm(){
           Create a Room
         </button>
       </form>
-    </div>';
-   
-}
-?>
-</html>
+    </div>
