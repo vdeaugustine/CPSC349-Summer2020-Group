@@ -24,6 +24,8 @@
 $_SESSION["nickname"] = $_POST["nickname"];
 $_SESSION["roomID"] = $_POST["roomID"];
 
+// if roomID == empty then just generate a randomizer alphanumeric setup
+
 ?>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -68,6 +70,9 @@ if(file_exists($_SESSION["roomID"]) && filesize($_SESSION["roomID"]) > 0){
 <script type="text/javascript">
 // jQuery Document
 $(document).ready(function(){
+
+// var room = "<?php echo $_SESSION["roomID"] ?>";
+// setInterval(loadLog(room), 1000);
 });
 $("#submitmsg").click(function(){	
 		var clientmsg = $("#usermsg").val();
@@ -96,13 +101,7 @@ $("#submitmsg").click(function(){
     }
 });
 }
-var room = "<?php echo $_SESSION["roomID"] ?>";
-var myvar = setInterval(myTimer(room), 1000);
 
-function myTimer() {
-  var d = new Date();
-  document.getElementById("chatbox").innerHTML = d.toLocaleTimeString();
-}
 </script>
 </body>
 </html>
