@@ -22,6 +22,7 @@
 <?php 
 
 $_SESSION["nickname"] = $_POST["nickname"];
+$_SESSION["roomID"] = $_POST["roomID"];
 
 ?>
     <link rel="stylesheet" href="css/styles.css" />
@@ -35,9 +36,10 @@ $_SESSION["nickname"] = $_POST["nickname"];
     </div>    
     <div id="chatbox">
     <?php
-if(file_exists("log.html") && filesize("log.html") > 0){
-    $handle = fopen("log.html", "r");
-    $contents = fread($handle, filesize("log.html"));
+
+if(file_exists($_SESSION["roomID"]) && filesize($_SESSION["roomID"]) > 0){
+    $handle = fopen($_SESSION["roomID"], "r");
+    $contents = fread($handle, filesize($_SESSION["roomID"]));
     fclose($handle);
      
     echo $contents;
@@ -71,8 +73,24 @@ $("#submitmsg").click(function(){
 		var clientmsg = $("#usermsg").val();
 		$.post("post.php", {text: clientmsg});				
 		$("#usermsg").attr("value", "");
+    var room = "<?php echo $_SESSION["roomID"] ?>";
+    loadLog(room);
 		return false;
 	});
+
+  function loadLog(room){
+    $.ajax({
+      url: room ,
+      cache: false,
+      success: function(html){
+        $("#chatbox").html(html); 		
+    },
+    error:function() {
+      alert("ajax call error");
+    }
+});
+}
+
 </script>
 </body>
 </html>
