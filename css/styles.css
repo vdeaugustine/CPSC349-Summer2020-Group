@@ -6,6 +6,7 @@
 .chat-button {
   background-color: #74fcfd;
   color: black;
+  position: relative;
 }
 .overall-layout {
   margin: 5%;
@@ -34,4 +35,34 @@
 
 button {
   display: inline-block;
+}
+
+.jumbotron.text-center.header {
+  padding: 120px 0 0 0;
+  background-image: url(https://cdn.discordapp.com/attachments/728063310939029606/737903140208377907/Group_4.png);
+}
+
+.logo {
+  font-size: 90px;
+  padding: 30px 0;
+  display: flex;
+}
+
+.left {
+  position: relative;
+  left: 39.9%;
+  background-color: #4eB9f5;
+  padding: 5px 15px;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 2px 0px #232323;
+}
+
+.right {
+  padding: 5px 15px 5px 0;
+  position: relative;
+  left: 39%;
+  margin: 23px 0 -23px 0;
+  background-color: #F5d14e;
+  text-shadow: 1px 1px 0px black;
+  box-shadow: 1px 1px 4px 0px #232323;
 }
