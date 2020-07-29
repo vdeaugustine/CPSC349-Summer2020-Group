@@ -79,18 +79,30 @@ $("#submitmsg").click(function(){
 	});
 
   function loadLog(room){
+    var oldscrollHeight = $("#chatbox").attr("scrollHeight");
     $.ajax({
       url: room ,
       cache: false,
       success: function(html){
         $("#chatbox").html(html); 		
+        //Auto-scroll			
+				var newscrollHeight = $("#chatbox").attr("scrollHeight") - 20; //Scroll height after the request
+				if(newscrollHeight > oldscrollHeight){
+					$("#chatbox").animate({ scrollTop: $('#chatbox').height()})
+          }
     },
     error:function() {
       alert("ajax call error");
     }
 });
 }
+var room = "<?php echo $_SESSION["roomID"] ?>";
+var myvar = setInterval(myTimer(room), 1000);
 
+function myTimer() {
+  var d = new Date();
+  document.getElementById("chatbox").innerHTML = d.toLocaleTimeString();
+}
 </script>
 </body>
 </html>
