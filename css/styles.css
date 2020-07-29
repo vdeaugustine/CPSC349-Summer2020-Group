@@ -76,4 +76,13 @@ button {
 
 .ui-images {
   text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
 }
