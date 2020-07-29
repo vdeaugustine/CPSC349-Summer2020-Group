@@ -87,3 +87,7 @@ img {
   height: auto;
   width: auto\9; /* ie8 */
 }
+
+#about-heading{
+  color: rgb(86, 143, 255);
+}
