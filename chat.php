@@ -21,10 +21,32 @@
     />
 <?php 
 
-$_SESSION["nickname"] = $_POST["nickname"];
-$_SESSION["roomID"] = $_POST["roomID"];
+// permitted characters we want to use
+$permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+ 
+// php function for generating the random stringID
+function generate_string($input, $strength = 16) {
+    $input_length = strlen($input);
+    $random_string = '';
+    for($i = 0; $i < $strength; $i++) {
+        $random_character = $input[mt_rand(0, $input_length - 1)];
+        $random_string .= $random_character;
+    }
+ 
+    return $random_string;
+}
+
+if($_POST["roomID"] == null)
+{
+  $_SESSION["roomID"] = generate_string($permitted_chars, 10);
+} else {
+  $_SESSION["roomID"] = $_POST["roomID"];
+}
+
 
 // if roomID == empty then just generate a randomizer alphanumeric setup
+
+
 
 ?>
     <link rel="stylesheet" href="css/styles.css" />
@@ -33,7 +55,7 @@ $_SESSION["roomID"] = $_POST["roomID"];
 <div id="wrapper">
     <div id="menu">
         <p class="welcome">Welcome, <?php echo $_POST["nickname"]; ?><br></p>
-        <h1>Room #<?php echo $_POST["roomID"]; ?><b></b></h1>
+        <h1>Room # <?php echo $_SESSION["roomID"]; ?><b></b></h1>
         <div style="clear:both"></div>
     </div>    
     <div id="chatbox">
