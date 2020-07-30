@@ -10,6 +10,8 @@
 }
 .overall-layout {
   margin: 5%;
+  padding: 20px;
+  background-color: #f5d14e;
 }
 
 #chatbox {
@@ -51,7 +53,7 @@ button {
 .left {
   position: relative;
   left: 39.9%;
-  background-color: #4eB9f5;
+  background-color: #4eb9f5;
   padding: 5px 15px;
   text-shadow: 1px 1px 1px black;
   box-shadow: 1px 1px 2px 0px #232323;
@@ -62,7 +64,7 @@ button {
   position: relative;
   left: 39%;
   margin: 23px 0 -23px 0;
-  background-color: #F5d14e;
+  background-color: #f5d14e;
   text-shadow: 1px 1px 0px black;
   box-shadow: 1px 1px 4px 0px #232323;
 }
@@ -72,14 +74,12 @@ button {
   padding-left: 200px;
   padding-right: 200px;
   /* color: rgb(104,155,255) */
-  
 }
 
 .ui-images {
   text-align: center;
   padding-left: 50px;
   padding-right: 50px;
-
 }
 
 img {
@@ -88,6 +88,15 @@ img {
   width: auto\9; /* ie8 */
 }
 
-#about-heading{
+#about-heading {
   color: rgb(86, 143, 255);
+}
+
+body {
+  background-color: #689bff;
+}
+
+.info {
+  background-color: white;
+  padding-top: 20px;
 }
