@@ -16,10 +16,16 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" title="default" />
+    <link rel="alternate stylesheet" href="css/dark.css" title="alternate" />
+    <script type="text/javascript" src="scripts/themes.js"></script>
   </head>
 
   <body>
+    <div class="color-mode">
+      <a href="#" onclick="setActiveStyleSheet('default')"; return false;”>Light Mode</a>
+      <a href="#" onclick="setActiveStyleSheet('alternate')"; return false;”>Dark Mode</a>
+    </div>
     <div id="wrapper">
       <div id="menu">
         <p class="welcome">
