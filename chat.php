@@ -21,6 +21,7 @@
     />
 <?php 
 
+$_SESSION["nickname"] = $_POST["nickname"];
 // permitted characters we want to use
 $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
  
@@ -93,8 +94,6 @@ if(file_exists($_SESSION["roomID"]) && filesize($_SESSION["roomID"]) > 0){
 // jQuery Document
 $(document).ready(function(){
 
-// var room = "<?php echo $_SESSION["roomID"] ?>";
-// setInterval(loadLog(room), 1000);
 });
 $("#submitmsg").click(function(){	
 		var clientmsg = $("#usermsg").val();
