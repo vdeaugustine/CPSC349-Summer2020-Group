@@ -8,11 +8,6 @@
   color: black;
   position: relative;
 }
-.overall-layout {
-  margin: 5%;
-  padding: 20px;
-  background-color: #f5d14e;
-}
 
 #chatbox {
   text-align: left;
@@ -91,14 +86,28 @@ img {
 #about-heading {
   color: rgb(86, 143, 255);
 }
-
+/*DARK MODE CHANGES*/
 body {
-  background-color: #689bff;
+  background-color: #131313;
 }
 
 .info {
-  background-color: white;
+  background-color: #131313;
   padding-top: 20px;
+}
+.info p {
+  color:#9c9c9c;
+}
+div#menu {
+  color: #9c9c9c;
+}
+.overall-layout {
+  margin: 5%;
+  padding: 20px;
+  background-color: #484848;
+}
+.overall-layout form{
+  color:#f8f8f8;
 }
 
 .color-mode a:hover {
@@ -121,6 +130,6 @@ body {
   padding: 20px 20px;
   float: right;
 }
-.info-page .color-mode{
+.color-mode.info{
   margin-top:-4%;
 }

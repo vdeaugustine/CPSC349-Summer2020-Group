@@ -17,11 +17,16 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" title="default" />
+    <link rel="alternate stylesheet" href="css/dark.css" title="alternate" />
+    <script type="text/javascript" src="scripts/themes.js"></script>
   </head>
 
-  <body>
-
+  <body class="info-page">
+    <div class="color-mode">
+      <a href="#" onclick="setActiveStyleSheet('default')"; return false;”>Light Mode</a>
+      <a href="#" onclick="setActiveStyleSheet('alternate')"; return false;”>Dark Mode</a>
+    </div>
     <div class="overall-layout">
       <form action="chat.php">
         <h1 class="mt-5">Public Display Name</h1>
