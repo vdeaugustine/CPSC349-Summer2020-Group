@@ -17,7 +17,10 @@
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  
+  <div class="color-mode">
+      <a href="#" onclick="setActiveStyleSheet('default')"; return false;”>Light Mode</a>
+      <a href="#" onclick="setActiveStyleSheet('alternate')"; return false;”>Dark Mode</a>
+    </div>
     <div class="overall-layout">
       <form name="main-form" action="chat.php" method="post">
         <h1 class="mt-5">Public Display Name</h1>

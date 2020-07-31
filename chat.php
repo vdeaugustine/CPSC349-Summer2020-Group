@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-
+    
     <title>Publichat</title>
     <link
       rel="stylesheet"
@@ -54,6 +54,10 @@ if($_POST["roomID"] == null)
   </head>
     <body>
 <div id="wrapper">
+<div class="color-mode">
+      <a href="#" onclick="setActiveStyleSheet('default')"; return false;”>Light Mode</a>
+      <a href="#" onclick="setActiveStyleSheet('alternate')"; return false;”>Dark Mode</a>
+    </div>
     <div id="menu">
         <p class="welcome">Welcome, <?php echo $_POST["nickname"]; ?><br></p>
         <h1>Room # <?php echo $_SESSION["roomID"]; ?><b></b></h1>
@@ -89,7 +93,7 @@ if(file_exists($_SESSION["roomID"]) && filesize($_SESSION["roomID"]) > 0){
       </form>
 
 </div>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 // jQuery Document
 $(document).ready(function(){
@@ -98,7 +102,7 @@ $(document).ready(function(){
 $("#submitmsg").click(function(){	
 		var clientmsg = $("#usermsg").val();
 		$.post("post.php", {text: clientmsg});				
-		$("#usermsg").attr("value", "");
+		$("#usermsg").val("");
     var room = "<?php echo $_SESSION["roomID"] ?>";
     loadLog(room);
 		return false;

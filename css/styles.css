@@ -86,6 +86,7 @@ img {
   max-width: 100%;
   height: auto;
   width: auto\9; /* ie8 */
+  border: 5px solid;
 }
 
 #about-heading {
@@ -97,30 +98,6 @@ body {
 }
 
 .info {
-  background-color: white;
+  background-color: #f5d14e;
   padding-top: 20px;
-}
-
-.color-mode a:hover {
-  text-decoration: none;
-  background-color: #f8f8f8;
-  color: #232323;
-  transition: .6s;
-}
-
-.color-mode a {
-  color: #fff;
-  padding: 10px 15px;
-  border: solid 3px black;
-  background-color: #000;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.color-mode {
-  padding: 20px 20px;
-  float: right;
-}
-.info-page .color-mode{
-  margin-top:-4%;
 }
